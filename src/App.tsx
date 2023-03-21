@@ -1,12 +1,18 @@
-import React from 'react'
-import { Product } from './components/Product'
-import { products } from './data/Products'
+// В компаненте работаем с состояниями и шаблоном
+import { Route, Routes } from 'react-router-dom'
+import { AboutPage } from './pages/AboutPage';
+import { ProductPage } from './pages/ProductsPage';
+import { Navigition } from './components/Navigation';
 
 function App() {
   return (
-    <div className='container mx-auto max-w-2xl pt-5'>
-      { products.map( product => <Product product={product} key={product.id}/> ) }
-    </div>
+    <>
+      <Navigition/>
+      <Routes>
+        <Route path='/' element={ <ProductPage />}/>
+        <Route path='/about' element={ <AboutPage />}/>
+      </Routes>
+    </>
   )
 }
 
