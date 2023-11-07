@@ -1,4 +1,4 @@
-#Знакомство с typescript
+#Typescript и Tailwind по Владилену Минину
 
 - библиотека tailwind;
 - модальное окно;
